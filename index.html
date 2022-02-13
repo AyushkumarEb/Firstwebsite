@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>First project using Bootstrap</title>
+    <style>
+    #carouselExampleCaptions{
+    display: none;
+    }
+    @media (max-width: 500px){
+    #carouselExampleCaptions{
+    display: block;
+    }
+    .p{
+    width: 100%;
+    height: 200px;
+    }
+    }
+    @media (min-width: 500px) and (max-width: 1000px){
+    #carouselExampleCaptions{
+    display: block;
+    }
+    .p{
+    width: 100%;
+    height: 480px;
+    }
+    }
+    
+    .aaa{
+    display: none;
+    }
+    @media (max-width: 500px){
+    .aaa{
+     display: block;
+     display: flex;
+     justify-content: center;
+    }
+    .a{
+    width: 140px;
+    height: 190px;
+    border: 1px solid black;
+    margin: 10px;
+    overflow: auto;
+    box-shadow: 5px 5px lightgray;
+    }
+    .k{
+    width: 140px;
+    height: 70px;
+    }
+    }
+    @media (min-width: 500px) and (max-width: 1000px){
+    .aaa{
+    display: block;
+    display: flex;
+    justify-content: center;
+    }
+    .a{
+    width: 400px;
+    height: 360px;
+    border: 1px solid black;
+    margin: 10px;
+    overflow: auto;
+    box-shadow: 10px 10px lightgray;
+    }
+    .k{
+    width: 400px;
+    height: 150px;
+    }
+    }
+    
+    
+    
+    .bbb{
+    display: none;
+    }
+    @media (max-width: 500px){
+    .bbb{
+     display: block;
+     display: flex;
+     justify-content: center;
+    }
+    .b{
+    width: 140px;
+    height: 190px;
+    border: 1px solid black;
+    margin: 10px;
+    overflow: auto;
+    box-shadow: 5px 5px lightgray;
+    }
+    .o{
+    width: 140px;
+    height: 70px;
+    }
+    }
+    @media (min-width: 500px) and (max-width: 1000px){
+    .bbb{
+    display: block;
+    display: flex;
+    justify-content: center;
+    }
+    .b{
+    width: 400px;
+    height: 360px;
+    border: 1px solid black;
+    margin: 10px;
+    overflow: auto;
+    box-shadow: 10px 10px lightgray;
+    }
+    .o{
+    width: 400px;
+    height: 170px;
+    }
+    }
+    
+    #fot{
+    display: none;
+    }
+    @media (max-width: 500px){
+    #fot{
+    display: block;
+    width: 280px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 40px;
+    }
+    .ui{
+    color: black;
+    border: 1px solid red;
+    background-color: red;
+    text-decoration: none;
+    }
+    .ui:hover{
+    border: 7px solid lightcoral;
+    }
+    }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">iCoder</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index 1.html">About</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="index 2.html">About Amazing places</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="index 4.html">Contact us</a>
+        </li>
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Topics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Programming</a></li>
+            <li><a class="dropdown-item" href="#">Science</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disable</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="mx-2">
+      <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">LogIn</button>
+      <button class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+      </div>
+    </div>
+     </div>
+</nav>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="login ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login to iCoder</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <form>
+         <div class="mb-3">
+           <label for="exampleInputEmail1" class="form-label">Email address</label>
+           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+           <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+         </div>
+         <div class="mb-3">
+           <label for="exampleInputPassword1" class="form-label">Password</label>
+           <input type="password" class="form-control" id="exampleInputPassword1">
+         </div>
+         <div class="mb-3 form-check">
+           <input type="checkbox" class="form-check-input" id="exampleCheck1">
+           <label class="form-check-label" for="exampleCheck1">Check me out</label>
+         </div>
+         <button type="submit" class="btn btn-primary">Login</button>
+       </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Signup to iCoder</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       
+       <form>
+               <div class="row g-3">
+               <div class="col">
+                 <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+               </div>
+               
+               <div class="col">
+                 <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+               </div>
+               </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Conform Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+  
+  
+  <button type="submit" class="btn btn-primary">Create account</button>
+</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+   
+   
+   
+   
+   
+   
+   
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="p" src="car1.jpg" class="d-block w-100 h-100" alt=" " >
+      <div class="carousel-caption d-none d-md-block">
+        <h2>WELCOME TO iCoder</h2>
+        <p>If you love programming then you have come right place.</p>
+        <button class="btn btn-danger">Technology</button>
+        <button class="btn btn-primary">Web development</button>
+        <button class="btn btn-success">Tech burner</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="p" src="car2.jpg" class="d-block w-100" alt=" ">
+      <div class="carousel-caption d-none d-md-block">
+       <h2>About important Topics</h2>
+       <p>You will have to learn some important topic like</p>
+        <button class="btn btn-danger">JAVA</button>
+        <button class="btn btn-primary">Python</button>
+        <button class="btn btn-success">Bootstrap</button>active
+  
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="p "src="car3.jpg" class="d-block w-100" alt=" ">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Award Winning</h2>
+        <p>On International, Nation and State level.</p>
+        <button class="btn btn-danger">International</button>
+        <button class="btn btn-primary">National</button>
+        <button class="btn btn-success">State</button>
+  
+        </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+  <div class="aaa">
+  <div class="a" id="a1">
+  <img class="k" src="Java.png" alt="">
+  <h5 style="color: blue; text-align: center">About</h5>
+  <p>Java is a widely used object-oriented programming language and software platform that runs on billions of devices, including notebook computers, mobile devices, gaming consoles, </p>
+  </div>
+  <div class="a" id="a2">
+  <img class="k" src="python.png" alt="">
+  <h5 style="color: blue; text-align: center">About</h5>
+  <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. ... Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance.</p>
+  </div>
+  </div>
+  
+  <div class="bbb">
+  <div class="b" id="b1">
+  <img  class="o" src="kotlin.png" alt="">
+  <h5 style="color: blue; text-align: center">About</h5>
+  <p>Kotlin is an open source programming language that combines object-oriented programming and functional features into a unique platform. ... Kotlin is a modern programming language that makes developers happier</p>
+  </div>
+  <div class="b" id="b2">
+  <img class="o" src="html.png" alt="">
+  <h5 style="color: blue; text-align: center">About</h5>
+  <p>HyperText Markup Language (HTML) is the set of markup symbols or codes inserted into a file intended for display on the Internet. The markup tells web browsers how to display a web page's words and images.</p>
+  </div>
+  </div>
+
+  <footer class="container">
+    <p class="float-right"><a href="#">Back To Top</a></p>
+    <p>0 2017-2019 Company, Inc. <a href="#">Privacy</a> <a href="#">Terms</a></p>
+  </footer>
+
+  
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
